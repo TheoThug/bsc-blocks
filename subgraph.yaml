@@ -1,15 +1,16 @@
 specVersion: 0.0.2
-description: Indexing all Ethereum Block data
-repository: https://github.com/blocklytics/ethereum-blocks
+description: Indexing BSC Block data
+repository: https://github.com/theothug/bsc-blocks
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: ConverterRegistryContract
-    network: rinkeby
+    network: mainnet
     source:
-      address: "0x0ddff327ddf7fe838e3e63d02001ef23ad1ede8e"
+      address: "0xCd267d0feb8F71B2a7783a8752C1f76e62dcDcAF"
       abi: ConverterRegistryContract
+      startBlock: 2000000
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.3
